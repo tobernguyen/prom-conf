@@ -48,10 +48,18 @@ scrape_configs:
     type: A
     port: 9101
 
-- job_name: 'CoinWebAPI'
+- job_name: 'WebAPI'
   dns_sd_configs:
   - names:
     - 'web-api-exporter'
     refresh_interval: 15s
     type: A
     port: 3000
+
+- job_name: 'Postgres'
+  dns_sd_configs:
+  - names:
+    - 'postgres-exporter'
+    refresh_interval: 15s
+    type: A
+    port: 9187
