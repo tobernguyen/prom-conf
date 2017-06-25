@@ -63,3 +63,19 @@ scrape_configs:
     refresh_interval: 15s
     type: A
     port: 9187
+
+- job_name: 'RabbitMQ'
+  dns_sd_configs:
+  - names:
+    - 'rabbitmq-exporter'
+    refresh_interval: 15s
+    type: A
+    port: 9090
+
+- job_name: 'Redis'
+  dns_sd_configs:
+  - names:
+    - 'redis-exporter'
+    refresh_interval: 15s
+    type: A
+    port: 9121
